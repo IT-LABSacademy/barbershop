@@ -24,6 +24,7 @@ button {
 body {
   font-weight: 400;
   font-family: 'Catamaran', sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -210,4 +211,163 @@ body {
 .service .container .wrapper .card:hover .card-title,
 .service .container .wrapper .card:hover .card-text {
   color: #FFF;
+}
+
+/* Gallery */
+.gallery .container .title {
+  text-align: center;
+}
+
+.gallery .container .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 37px;
+  margin: 110px 0 77px;
+}
+
+.gallery .container .wrapper .image {
+  width: 435px;
+  height: 435px;
+  position: relative;
+}
+
+/* css pseudoclass */
+.gallery .container .wrapper .image::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #5296FF59;
+}
+
+.gallery .container .wrapper .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery .container .btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* footer */
+.footer {
+  margin: 100px 0 50px;
+}
+
+.footer .container {
+  text-align: center;
+}
+
+.footer .container .text {
+  width: 526px;
+  margin: 40px auto;
+}
+
+.footer .container .socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer .container .socials .icon {
+  background-color: #D3E5FF;
+  width: 67px;
+  height: 67px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.footer .container .socials .icon:hover {
+  background-color: #99BAED;
+}
+
+.footer .container .line {
+  width: 100%;
+  height: 1px;
+  margin-top: 50px;
+  background: #99BAED;
+}
+
+/* Effects------------ */
+.history {
+  position: relative;
+}
+
+.history::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: -170px;
+  background: url(images/left-effect.svg) no-repeat left / contain;
+}
+
+.history::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: -230px;
+  background: url(images/right-effect.svg) no-repeat right / contain;
+}
+
+.service {
+  position: relative;
+}
+
+.service::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: url(images/left-effect.svg) no-repeat left bottom / contain;
+}
+
+.service::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url(images/right-effect.svg) no-repeat right bottom / contain;
+}
+
+.gallery {
+  position: relative;
+}
+
+.gallery::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -200px;
+  top: 0;
+  background: url(images/left-effect.svg) no-repeat left / contain;
+}
+
+.gallery::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: -200px;
+  top: 0;
+  background: url(images/right-effect.svg) no-repeat right / contain;
 }
